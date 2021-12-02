@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ERP.controller.AuxiliarFacturacionController">
+   <top>
+      <AnchorPane prefHeight="124.0" prefWidth="710.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="lblUserAdmin" layoutX="244.0" layoutY="93.0" prefHeight="17.0" prefWidth="196.0" text="User :" />
+            <ImageView fitHeight="81.0" fitWidth="100.0" layoutX="593.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../resources/PNG/contabilidad.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="lblFecha" layoutX="244.0" layoutY="25.0" prefHeight="17.0" prefWidth="135.0" text="Fecha" />
+            <Label fx:id="lblHora" layoutX="244.0" layoutY="57.0" prefHeight="17.0" prefWidth="135.0" text="Hora" />
+            <ImageView fitHeight="78.0" fitWidth="69.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../resources/PNG/logoEfigas.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="btnCerrarSesion" layoutX="590.0" layoutY="98.0" mnemonicParsing="false" onAction="#cerrarSesionActrion" text="Cerrar Sesion" />
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <AnchorPane prefHeight="688.0" prefWidth="710.0" BorderPane.alignment="CENTER">
+         <children>
+            <TabPane prefHeight="687.0" prefWidth="710.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                  <Tab text="Registro facturas">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="45.0" layoutY="50.0" text="Fecha:" />
+                              <Button fx:id="btnNuevoEstudiante1" layoutX="389.0" layoutY="329.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="143.0" text="Enviar" />
+                              <TableView layoutX="45.0" layoutY="365.0" prefHeight="273.0" prefWidth="621.0">
+                                <columns>
+                                  <TableColumn prefWidth="85.0" text="Cedula" />
+                                  <TableColumn prefWidth="97.0" text="Nombre" />
+                                    <TableColumn prefWidth="79.0" text="Direccion" />
+                                    <TableColumn prefWidth="90.0" text="Correo" />
+                                    <TableColumn prefWidth="269.0" text="Total a pagar" />
+                                </columns>
+                              </TableView>
+                              <Label layoutX="347.0" layoutY="189.0" prefHeight="41.0" prefWidth="65.0" />
+                              <DatePicker layoutX="94.0" layoutY="46.0" />
+                              <Label layoutX="372.0" layoutY="88.0" text="Cedula:" />
+                              <TextField fx:id="txtIdEstudiante121" layoutX="424.0" layoutY="84.0" prefHeight="25.0" prefWidth="180.0" />
+                              <Label layoutX="372.0" layoutY="50.0" text="Correo:" />
+                              <TextField fx:id="txtIdEstudiante12" layoutX="424.0" layoutY="46.0" prefHeight="25.0" prefWidth="180.0" />
+                              <TextField fx:id="txtIdEstudiante11" layoutX="94.0" layoutY="122.0" prefHeight="25.0" prefWidth="180.0" />
+                              <TextField fx:id="txtIdEstudiante1" layoutX="94.0" layoutY="84.0" prefHeight="25.0" prefWidth="180.0" />
+                              <Label layoutX="42.0" layoutY="88.0" text="Cliente:" />
+                              <Label layoutX="36.0" layoutY="126.0" text="Dirección:" />
+                              <TextField fx:id="txtIdEstudiante1211" layoutX="424.0" layoutY="122.0" prefHeight="25.0" prefWidth="180.0" />
+                              <Label layoutX="359.0" layoutY="126.0" text="Medición:" />
+                              <Separator layoutX="-5.0" layoutY="159.0" prefHeight="0.0" prefWidth="710.0" />
+                              <Label layoutX="240.0" layoutY="164.0" text="DATOS TÉCNICOS DE CONSUMO" />
+                              <Label layoutX="335.0" layoutY="275.0" text="Consumo K.W.H:" />
+                              <TextField fx:id="txtIdEstudiante12111" layoutX="424.0" layoutY="271.0" prefHeight="25.0" prefWidth="180.0" />
+                              <Label layoutX="43.0" layoutY="275.0" text="Consumo m³:" />
+                              <Label layoutX="40.0" layoutY="237.0" prefHeight="17.0" prefWidth="90.0" text="Lectura actual:" />
+                              <TextField fx:id="txtIdEstudiante13" layoutX="125.0" layoutY="233.0" prefHeight="25.0" prefWidth="180.0" />
+                              <TextField fx:id="txtIdEstudiante111" layoutX="125.0" layoutY="271.0" prefHeight="25.0" prefWidth="180.0" />
+                              <TextField fx:id="txtIdEstudiante122" layoutX="424.0" layoutY="195.0" prefHeight="25.0" prefWidth="180.0" />
+                              <Label layoutX="329.0" layoutY="199.0" text="Poder calorico:" />
+                              <TextField fx:id="txtIdEstudiante1212" layoutX="424.0" layoutY="233.0" prefHeight="25.0" prefWidth="180.0" />
+                              <Label layoutX="315.0" layoutY="237.0" text="Factor de correción:" />
+                              <Label layoutX="36.0" layoutY="199.0" text="Lectura Anterior:" />
+                              <TextField fx:id="txtIdEstudiante1221" layoutX="125.0" layoutY="195.0" prefHeight="25.0" prefWidth="180.0" />
+                              <Button fx:id="btnNuevoEstudiante11" layoutX="203.0" layoutY="329.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="143.0" text="Generar" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Pago  facturas">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="45.0" layoutY="50.0" text="Fecha:" />
+                              <TableView layoutX="45.0" layoutY="365.0" prefHeight="273.0" prefWidth="621.0">
+                                 <columns>
+                                    <TableColumn prefWidth="85.0" text="Cedula" />
+                                    <TableColumn prefWidth="97.0" text="Nombre" />
+                                    <TableColumn prefWidth="79.0" text="Direccion" />
+                                    <TableColumn prefWidth="90.0" text="Correo" />
+                                    <TableColumn prefWidth="269.0" text="Total a pagar" />
+                                 </columns>
+                              </TableView>
+                              <Label layoutX="347.0" layoutY="189.0" prefHeight="41.0" prefWidth="65.0" />
+                              <DatePicker layoutX="94.0" layoutY="46.0" />
+                              <Label layoutX="372.0" layoutY="88.0" text="Cedula:" />
+                              <TextField fx:id="txtIdEstudiante1211" layoutX="424.0" layoutY="84.0" prefHeight="25.0" prefWidth="180.0" />
+                              <Label layoutX="372.0" layoutY="50.0" text="Correo:" />
+                              <TextField fx:id="txtIdEstudiante121" layoutX="424.0" layoutY="46.0" prefHeight="25.0" prefWidth="180.0" />
+                              <TextField fx:id="txtIdEstudiante111" layoutX="94.0" layoutY="122.0" prefHeight="25.0" prefWidth="180.0" />
+                              <TextField fx:id="txtIdEstudiante11" layoutX="94.0" layoutY="84.0" prefHeight="25.0" prefWidth="180.0" />
+                              <Label layoutX="42.0" layoutY="88.0" text="Cliente:" />
+                              <Label layoutX="36.0" layoutY="126.0" text="Dirección:" />
+                              <TextField fx:id="txtIdEstudiante12111" layoutX="424.0" layoutY="122.0" prefHeight="25.0" prefWidth="180.0" />
+                              <Label layoutX="359.0" layoutY="126.0" text="Medición:" />
+                              <Separator layoutX="-5.0" layoutY="159.0" prefHeight="0.0" prefWidth="710.0" />
+                              <Label layoutX="313.0" layoutY="162.0" text="MEDIO DE PAGO" />
+                              <Label layoutX="365.0" layoutY="284.0" text="N° cuenta:" />
+                              <TextField fx:id="txtIdEstudiante121111" layoutX="425.0" layoutY="281.0" prefHeight="25.0" prefWidth="180.0" />
+                              <Label layoutX="40.0" layoutY="284.0" text="Valor residual:" />
+                              <Label layoutX="44.0" layoutY="247.0" prefHeight="17.0" prefWidth="90.0" text="Valor pagado:" />
+                              <TextField fx:id="txtIdEstudiante131" layoutX="122.0" layoutY="242.0" prefHeight="25.0" prefWidth="180.0" />
+                              <TextField fx:id="txtIdEstudiante1111" layoutX="122.0" layoutY="280.0" prefHeight="25.0" prefWidth="180.0" />
+                              <TextField fx:id="txtIdEstudiante1221" layoutX="425.0" layoutY="205.0" prefHeight="25.0" prefWidth="180.0" />
+                              <Label layoutX="347.0" layoutY="209.0" text="N° Referencia:" />
+                              <TextField fx:id="txtIdEstudiante12121" layoutX="425.0" layoutY="243.0" prefHeight="25.0" prefWidth="180.0" />
+                              <Label layoutX="351.0" layoutY="247.0" text="Tipo tarjeta:" />
+                              <Label layoutX="43.0" layoutY="208.0" text="N° Referencia :" />
+                              <TextField fx:id="txtIdEstudiante12211" layoutX="122.0" layoutY="204.0" prefHeight="25.0" prefWidth="180.0" />
+                              <Button fx:id="btnNuevoEstudiante111" layoutX="249.0" layoutY="329.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="143.0" text="Pagar" />
+                              <Label layoutX="127.0" layoutY="181.0" text="Efectivo" />
+                              <Label layoutX="473.0" layoutY="181.0" text="Tarjeta" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Gestión clientes morosos">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="45.0" layoutY="50.0" text="Fecha de corte:" />
+                              <Button fx:id="btnNuevoEstudiante11" layoutX="385.0" layoutY="230.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="143.0" text="Confirmar corte" />
+                              <TableView layoutX="37.0" layoutY="284.0" prefHeight="273.0" prefWidth="621.0">
+                                 <columns>
+                                    <TableColumn prefWidth="85.0" text="Cedula" />
+                                    <TableColumn prefWidth="97.0" text="Nombre" />
+                                    <TableColumn prefWidth="81.0" text="Direccion" />
+                                    <TableColumn prefWidth="88.0" text="Correo" />
+                                    <TableColumn prefWidth="269.0" text="Estado(Mora/Al dia)" />
+                                 </columns>
+                              </TableView>
+                              <Label layoutX="347.0" layoutY="189.0" prefHeight="41.0" prefWidth="65.0" />
+                              <DatePicker layoutX="132.0" layoutY="46.0" />
+                              <Label layoutX="372.0" layoutY="112.0" text="Cedula:" />
+                              <TextField fx:id="txtIdEstudiante1211" layoutX="424.0" layoutY="108.0" prefHeight="25.0" prefWidth="180.0" />
+                              <Label layoutX="372.0" layoutY="50.0" text="Correo:" />
+                              <TextField fx:id="txtIdEstudiante121" layoutX="424.0" layoutY="46.0" prefHeight="25.0" prefWidth="180.0" />
+                              <TextField fx:id="txtIdEstudiante111" layoutX="131.0" layoutY="164.0" prefHeight="25.0" prefWidth="180.0" />
+                              <TextField fx:id="txtIdEstudiante11" layoutX="131.0" layoutY="108.0" prefHeight="25.0" prefWidth="180.0" />
+                              <Label layoutX="79.0" layoutY="112.0" text="Cliente:" />
+                              <Label layoutX="73.0" layoutY="168.0" text="Dirección:" />
+                              <TextField fx:id="txtIdEstudiante12111" layoutX="424.0" layoutY="164.0" prefHeight="25.0" prefWidth="180.0" />
+                              <Label layoutX="359.0" layoutY="168.0" text="Medición:" />
+                              <Button fx:id="btnNuevoEstudiante112" layoutX="186.0" layoutY="230.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="143.0" text="Actualizar fecha" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
